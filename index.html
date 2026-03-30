@@ -877,6 +877,9 @@ async function switchSource(src) {
         }
         document.getElementById('header-time').textContent = toJST(bandId);
     }
+
+    // ★ ソース切替後に自動で降水量取得
+    await pollAll();
 }
 
 // ============================================================
